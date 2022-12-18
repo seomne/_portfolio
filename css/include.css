@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* header */
+#header {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  z-index: 10; /* cursor: none; */
+}
+
+#header .header_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vw 6vw;
+}
+#header .header_wrap .logo {
+  font-size: 1.46vw;
+}
+#header .header_wrap .menu_btn {
+  display: none;
+}
+
+#header .header_wrap ul {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 1;
+  transition: all 0.5s;
+}
+#header .header_wrap ul li.work {
+  margin-left: 3.85vw;
+  margin-right: 3.59vw;
+}
+#header .header_wrap ul li.home {
+  display: none;
+}
+#header .header_wrap ul li a {
+  font-size: 1vw;
+  color: #fff;
+}
+
+/* 햄버거 텍스트 메뉴 */
+#header .header_wrap .logo.active {
+  position: relative;
+  color: #f8f8f4 !important;
+  z-index: 10;
+}
+
+#header .header_wrap .menu_btn {
+  position: relative;
+  width: 2.81vw;
+  height: 2.81vw;
+  z-index: 10;
+  opacity: 0;
+}
+
+#header .header_wrap .menu_btn span {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 0.18vw;
+  background-color: #f8f8f4;
+  transition: all 0.3s;
+}
+
+#header .header_wrap .menu_btn .line_1 {
+  transform: rotate(0) translate(0%, -0.36vw);
+}
+
+#header .header_wrap .menu_btn .line_2 {
+  transform: rotate(0) translate(0%, 0.36vw);
+}
+
+#header .header_wrap .menu_btn.active {
+  position: relative;
+  z-index: 10;
+}
+
+#header .header_wrap .menu_btn.active span {
+  background-color: #f8f8f4 !important;
+  transition: all 0.3s;
+}
+
+#header .header_wrap .menu_btn.active .line_1 {
+  transform: rotate(45deg) translate(0%, 0%);
+}
+
+#header .header_wrap .menu_btn.active .line_2 {
+  transform: rotate(-45deg) translate(0%, 0%);
+}
+
+#header .header_wrap ul.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  z-index: 5;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+#header .header_wrap ul.active li {
+  position: relative;
+  display: flex;
+  margin: 1.25vw 0; /* transform: translateY(-100%); */
+}
+
+#header .header_wrap ul.active li::before {
+  content: "";
+  font-size: 1.56vw;
+  font-family: "SilkSerifLightItalic", sans-serif;
+  margin-right: 0.68vw;
+  margin-top: 0.52vw;
+  color: #f8f8f4;
+}
+
+#header .header_wrap ul.active li a {
+  font-size: 4.79vw;
+  position: relative;
+  display: block;
+}
+
+#header .header_wrap ul.active li a:after {
+  content: "";
+  width: 0;
+  height: 0.18vw;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+#header .header_wrap ul.active li a:hover:after {
+  width: 100%;
+}
+
+/* scrolldown */
+#scroll_down {
+  display: block;
+  position: absolute;
+  left: 6vw;
+  bottom: 0;
+  text-align: center;
+  width: 2px;
+  height: 120px;
+}
+#scroll_down::before {
+  -webkit-animation: elasticus 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  /* Safari 4+ */
+  /* Fx 5+ */
+  /* Opera 12+ */
+  animation: elasticus 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  /* IE 10+, Fx 29+ */
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 120px;
+  background: #fff;
+  content: " ";
+}
+
+#scroll_title {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.6vw;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 40px;
+  right: -25px;
+  width: 110px;
+  transform: rotate(-90deg);
+}
+
+@-webkit-keyframes elasticus {
+  0% {
+    transform-origin: 0% 0%;
+    transform: scale(1, 0);
+  }
+  50% {
+    transform-origin: 0% 0%;
+    transform: scale(1, 1);
+  }
+  50.1% {
+    transform-origin: 0% 100%;
+    transform: scale(1, 1);
+  }
+  100% {
+    transform-origin: 0% 100%;
+    transform: scale(1, 0);
+  }
+}
+@keyframes elasticus {
+  0% {
+    transform-origin: 0% 0%;
+    transform: scale(1, 0);
+  }
+  50% {
+    transform-origin: 0% 0%;
+    transform: scale(1, 1);
+  }
+  50.1% {
+    transform-origin: 0% 100%;
+    transform: scale(1, 1);
+  }
+  100% {
+    transform-origin: 0% 100%;
+    transform: scale(1, 0);
+  }
+}/*# sourceMappingURL=include.css.map */
