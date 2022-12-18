@@ -65,9 +65,9 @@ body {
       font-size: 1.3vw;
       margin: 2vw 0;
     }
-    h4{
-        font-size: 1vw;
-        font-weight: 500;
+    h4 {
+      font-size: 1vw;
+      font-weight: 500;
     }
   }
   &_icons {
@@ -131,11 +131,11 @@ body {
   height: auto;
   margin-left: -33.07vw;
   z-index: 5;
-  & .work{
+  & .work {
     width: 32vw;
     height: 32vw;
     text-align: center;
-    &:hover{
+    &:hover {
       cursor: url(../images/cursor_on.png) 20 10, auto;
     }
   }
@@ -150,6 +150,9 @@ body {
   }
   & .work4 {
     transform: translate(55%, -110%);
+    img {
+      width: 70%;
+    }
   }
 }
 
@@ -173,9 +176,8 @@ body {
   }
 }
 
-
 /* footer */
-footer.index_footer{
+footer.index_footer {
   position: absolute;
   right: -1.5vw;
   top: 50%;
@@ -211,42 +213,40 @@ footer.index_footer{
     width: 2vw;
     height: 2vw;
     display: inline-block;
-    margin-right: 0.5vw;   
-    &:last-child{
+    margin-right: 0.5vw;
+    &:last-child {
       margin-right: 0;
-    } 
-    & img{
+    }
+    & img {
       width: 100%;
       border-radius: 50%;
     }
   }
 }
 
-.guide_modal.modal{
-  background-color: rgba(0,0,0,0.8);
-  & .modal-dialog{
+.guide_modal.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  & .modal-dialog {
     width: auto;
   }
 }
 
-.guide_modal.modal .modal-content{
+.guide_modal.modal .modal-content {
   display: block;
-  & .text{
+  & .text {
     padding: 2vw;
-    h3{
+    h3 {
       font-size: 2vw;
       margin-bottom: 0.9vw;
     }
-    p{
+    p {
       font-size: 1vw;
       line-height: 1.5;
     }
-    span{
+    span {
       display: block;
       margin-top: 1vw;
       color: #888;
     }
   }
-  
 }
-

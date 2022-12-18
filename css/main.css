@@ -147,6 +147,9 @@ body {
 .work_wrap .work4 {
   transform: translate(55%, -110%);
 }
+.work_wrap .work4 img {
+  width: 70%;
+}
 
 .section04 {
   padding: 3vw 6vw;
