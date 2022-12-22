@@ -21,9 +21,9 @@ gsap
     0
   )
   .fromTo(
-    "#header .header_wrap ul",
-    { display: "flex" },
-    { display: "none", ease: "none", duration: 6 },
+    "#header .header_wrap .menu_btn span",
+    { backgroundColor: "#fff" },
+    { backgroundColor: "#000", ease: "none", duration: 1 },
     0
   )
   .fromTo(
@@ -50,11 +50,6 @@ gsap
   .to(
     "#header .header_wrap .logo",
     { color: "#000", ease: "none", duration: 0 },
-    0
-  )
-  .to(
-    "#header .header_wrap .menu_btn",
-    { opacity: 1, ease: "none", duration: 0 },
     0
   )
   .to(

@@ -1,16 +1,17 @@
-$(function(){
-    $(document).on('scroll', function(){
-        if($(window).scrollTop() > 500){
-			$(".header_project .header_wrap .menu_btn").css('display', 'block');
-            $(".header_project .header_wrap .menu_btn").css('opacity', '1');
-            $(".header_project .header_wrap .menu_btn span").css('background', '#000');
-            $(".header_project .header_wrap ul").css('display', 'none');            
-            $(".header_project .header_wrap .logo").css('visibility', 'hidden');            
-        }else{
-			$(".header_project .header_wrap .menu_btn").css('display', 'none');
-            $(".header_project .header_wrap ul").css('display', 'flex');
-			$(".header_project .header_wrap .logo").css('visibility', 'visible');
-        }
-    })
-
+function scroll_style() {
+  var window_top = $(window).scrollTop();
+  var div_top = $(".project_title").offset().top;
+  if (window_top > div_top) {
+    $(".header_project .header_wrap .menu_btn span").css({
+      backgroundColor: "#000",
+    });
+  } else {
+    $(".header_project .header_wrap .menu_btn span").css({
+      backgroundColor: "#FFF",
+    });
+  }
+}
+$(function () {
+  $(window).scroll(scroll_style);
+  scroll_style();
 });

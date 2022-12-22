@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* header */
 #header {
   position: fixed;
@@ -15,13 +14,14 @@
 }
 #header .header_wrap .logo {
   font-size: 1.46vw;
+  color: transparent;
 }
 #header .header_wrap .menu_btn {
-  display: none;
+  display: block;
 }
 
 #header .header_wrap ul {
-  display: flex;
+  display: none;
   justify-content: flex-end;
   opacity: 1;
   transition: all 0.5s;
@@ -38,52 +38,35 @@
   color: #fff;
 }
 
-/* 햄버거 텍스트 메뉴 */
-#header .header_wrap .logo.active {
-  position: relative;
-  color: #f8f8f4 !important;
-  z-index: 10;
-}
-
+/* menu */
 #header .header_wrap .menu_btn {
   position: relative;
-  width: 2.81vw;
-  height: 2.81vw;
+  width: 50px;
+  height: 50px;
   z-index: 10;
-  opacity: 0;
 }
-
 #header .header_wrap .menu_btn span {
   position: absolute;
   top: 50%;
   width: 100%;
-  height: 0.18vw;
-  background-color: #f8f8f4;
+  height: 3px;
+  background-color: #fff;
   transition: all 0.3s;
 }
-
 #header .header_wrap .menu_btn .line_1 {
-  transform: rotate(0) translate(0%, -0.36vw);
+  transform: rotate(0) translate(0%, -8px);
 }
-
 #header .header_wrap .menu_btn .line_2 {
-  transform: rotate(0) translate(0%, 0.36vw);
-}
-
-#header .header_wrap .menu_btn.active {
-  position: relative;
-  z-index: 10;
+  transform: rotate(0) translate(0%, 8px);
 }
 
 #header .header_wrap .menu_btn.active span {
-  background-color: #f8f8f4 !important;
+  background-color: #fff !important;
   transition: all 0.3s;
 }
-
 #header .header_wrap .menu_btn.active .line_1 {
   transform: rotate(45deg) translate(0%, 0%);
 }
-
 #header .header_wrap .menu_btn.active .line_2 {
   transform: rotate(-45deg) translate(0%, 0%);
 }
@@ -107,34 +90,22 @@
 #header .header_wrap ul.active li {
   position: relative;
   display: flex;
-  margin: 1.25vw 0; /* transform: translateY(-100%); */
+  margin: 24px 0;
 }
-
-#header .header_wrap ul.active li::before {
-  content: "";
-  font-size: 1.56vw;
-  font-family: "SilkSerifLightItalic", sans-serif;
-  margin-right: 0.68vw;
-  margin-top: 0.52vw;
-  color: #f8f8f4;
-}
-
 #header .header_wrap ul.active li a {
-  font-size: 4.79vw;
+  font-size: 92px;
   position: relative;
   display: block;
 }
-
 #header .header_wrap ul.active li a:after {
   content: "";
   width: 0;
-  height: 0.18vw;
+  height: 5px;
   background-color: #fff;
   position: absolute;
   left: 0;
   bottom: -5px;
 }
-
 #header .header_wrap ul.active li a:hover:after {
   width: 100%;
 }
@@ -170,7 +141,7 @@
   display: block;
   text-transform: uppercase;
   color: #fff;
-  font-size: 0.6vw;
+  font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.1em;
   position: absolute;

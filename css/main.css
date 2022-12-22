@@ -1,7 +1,3 @@
-body {
-  overflow-x: hidden;
-}
-
 .section01 {
   background-color: black;
   height: 100vh;
@@ -12,15 +8,14 @@ body {
   overflow: hidden;
 }
 .section01 .title {
-  padding: 5.21vw 0 0;
+  padding: 100px 0 0;
   color: #fff;
-  font-size: 6vw;
+  font-size: 118px;
   position: relative;
-  z-index: 9999999999;
 }
 
 .section02 .text {
-  padding: 12vw 0;
+  padding: 230px 0;
 }
 .section02 .text h1 {
   font-size: 4vw;
@@ -28,41 +23,41 @@ body {
   line-height: 1.25;
 }
 .section02 .text h1:last-child {
-  font-size: 2.5vw;
+  font-size: 48px;
   font-style: italic;
   font-weight: 100;
-  margin-top: 2.5vw;
+  margin-top: 48px;
 }
 
 .introduce {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 6vw;
+  padding-bottom: 115px;
 }
 .introduce_img {
-  margin-right: 6vw;
+  margin-right: 115px;
 }
 .introduce_img img {
-  width: 360px;
+  width: 384px;
 }
 .introduce_text h2 {
-  font-size: 2vw;
+  font-size: 40px;
 }
 .introduce_text h2::after {
   content: "";
   display: block;
   width: 100%;
-  height: 0.18vw;
+  height: 3px;
   background-color: #000;
   margin-top: 15px;
 }
 .introduce_text h3 {
-  font-size: 1.3vw;
-  margin: 2vw 0;
+  font-size: 25px;
+  margin: 38px 0;
 }
 .introduce_text h4 {
-  font-size: 1vw;
+  font-size: 20px;
   font-weight: 500;
 }
 .introduce_icons {
@@ -92,7 +87,7 @@ body {
   text-align: center;
   width: 100%;
   height: 100%;
-  font-size: 7vw;
+  font-size: 138px;
   line-height: 1;
 }
 .section03 .title h1 span {
@@ -101,13 +96,13 @@ body {
   font-weight: 100;
 }
 .section03 .title a {
-  padding: 0.5vw 1vw;
+  padding: 10px 20px;
   box-sizing: border-box;
   border: 1px solid #fff;
   color: #fff;
-  font-size: 1.5vw;
+  font-size: 28px;
   border-radius: 50px;
-  margin-top: 4vw;
+  margin-top: 78px;
 }
 .section03 .title a:hover {
   background-color: #fff;
@@ -128,12 +123,16 @@ body {
   z-index: 5;
 }
 .work_wrap .work {
-  width: 32vw;
-  height: 32vw;
+  width: 600px;
+  height: 500px;
   text-align: center;
+  margin: 78px;
 }
 .work_wrap .work:hover {
   cursor: url(../images/cursor_on.png) 20 10, auto;
+}
+.work_wrap .work img {
+  width: 25vw;
 }
 .work_wrap .work1 {
   transform: translate(-55%, 0%);
@@ -147,27 +146,24 @@ body {
 .work_wrap .work4 {
   transform: translate(55%, -110%);
 }
-.work_wrap .work4 img {
-  width: 70%;
-}
 
 .section04 {
-  padding: 3vw 6vw;
+  padding: 58px 115px;
   box-sizing: border-box;
   position: relative;
 }
 .section04 h1 {
-  margin: 6vw 0 3vw;
-  font-size: 6.5vw;
-  line-height: 1.2;
+  margin: 115px 0 58px;
+  font-size: 124px;
+  line-height: 1.1;
 }
 .section04 p {
-  font-size: 1.2vw;
+  font-size: 28px;
   line-height: 1.5;
 }
 .section04 p.please {
-  font-size: 0.9vw;
-  margin-top: 0.5vw;
+  font-size: 20px;
+  margin-top: 10px;
   color: #888;
 }
 
@@ -181,18 +177,18 @@ footer.index_footer {
 }
 
 .contact_wrap {
-  margin: 4vw 0;
+  margin: 78px 0;
   display: flex;
   justify-content: space-between;
 }
 
 .contact p {
-  font-size: inherit;
+  font-size: 20px;
 }
 .contact span {
   display: block;
-  margin-top: 0.3vw;
-  font-size: 1vw;
+  margin-top: 5px;
+  font-size: 24px;
 }
 .contact span::after {
   content: "";
@@ -241,4 +237,6 @@ footer.index_footer {
   display: block;
   margin-top: 1vw;
   color: #888;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/************************ Media Query **//*# sourceMappingURL=main.css.map */
