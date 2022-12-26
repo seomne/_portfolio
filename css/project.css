@@ -123,7 +123,6 @@ button:hover {
   text-align: center;
   padding: 10px 20px;
   box-sizing: border-box;
-  font-size: var(--font-small);
   font-weight: 500;
   color: #121212;
   background: #fff;
@@ -310,12 +309,12 @@ footer.project_footer address {
 }
 
 .contact p {
-  font-size: inherit;
+  font-size: 20px;
 }
 .contact span {
   display: block;
-  margin-top: 0.3vw;
-  font-size: 1vw;
+  margin-top: 5px;
+  font-size: 24px;
 }
 .contact span::after {
   content: "";
@@ -353,6 +352,9 @@ footer.project_footer address {
   }
   .filtermenu.media {
     display: block;
+  }
+  footer.project_footer {
+    padding-bottom: 144px;
   }
 }
 @media screen and (max-width: 768px) {

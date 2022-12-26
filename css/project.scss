@@ -137,7 +137,7 @@ h1 {
 
 /* footer */
 footer.project_footer {
-  @include wrap-padding;
+  @include wrap-padding;  
   background-color: $black-color;
   color: $white-color;
   address {
@@ -153,12 +153,12 @@ footer.project_footer {
 
 .contact {
   p {
-    font-size: inherit;
+    font-size: 20px;
   }
   span {
     display: block;
-    margin-top: 0.3vw;
-    font-size: 1vw;
+    margin-top: 5px;
+    font-size: 24px;
     &::after {
       content: "";
       display: block;
@@ -199,6 +199,9 @@ footer.project_footer {
   }
   .filtermenu.media {
     display: block;
+  }
+  footer.project_footer{
+    padding-bottom: 144px;
   }
 }
 @media screen and (max-width: 768px) {
