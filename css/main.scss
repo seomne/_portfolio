@@ -1,8 +1,9 @@
-@import "../css/common.scss";
-
+@import "../css/utils.scss";
+/* section */
 section {
   width: 100vw;
 }
+/* section01 */
 .section01 {
   background-color: $black-color;
   height: 100vh;
@@ -10,17 +11,17 @@ section {
   z-index: 2;
   overflow: hidden;
   @include wrap-padding;
-
-  .title {
+  & .title {
     padding: 100px 0 0;
     color: $white-color;
-    font-size: 118px;
+    @include title-font;
     position: relative;
   }
 }
-
+/* section02 */
 .section02 {
-  .text {
+  @include wrap-padding;
+  & .text {
     padding: 230px 0;
     & h1 {
       font-size: 78px;
@@ -46,7 +47,6 @@ section {
       width: 384px;
     }
   }
-
   &_text {
     h2 {
       font-size: 40px;
@@ -60,11 +60,11 @@ section {
       }
     }
     h3 {
-      font-size: 25px;
+      @include extrabold-font;
       margin: 38px 0;
     }
     h4 {
-      font-size: 20px;
+      @include medium-font;
       font-weight: 500;
     }
   }
@@ -80,7 +80,7 @@ section {
     }
   }
 }
-
+/* section03 */
 .section03 {
   height: auto;
   overflow: hidden;
@@ -103,12 +103,10 @@ section {
       font-weight: 100;
     }
     & a {
-      padding: 10px 20px;
-      box-sizing: border-box;
+      @include more-btn;
       border: 1px solid $white-color;
       color: $white-color;
       font-size: 28px;
-      border-radius: 50px;
       margin-top: 78px;
       position: relative;
       z-index: 10;
@@ -133,7 +131,7 @@ section {
   z-index: 5;
   & .work {
     width: 600px;
-    height: 500px;
+    height: 600px;
     text-align: center;
     margin: 78px;
     &:hover {
@@ -141,7 +139,7 @@ section {
     }
   }
   & .work img {
-    width: 25vw;
+    width: 500px;
   }
   & .work1 {
     transform: translate(-55%, 0%);
@@ -156,29 +154,32 @@ section {
     transform: translate(55%, -110%);
   }
 }
-
+/* section04 */
 .section04 {
   @include wrap-padding;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 100vh;
+  height: 100vh; 
   h1 {
-    font-size: 124px;
+    @include title-font;
     line-height: 1.1;
-  }
-  p {
-    font-size: 28px;
-    line-height: 1.5;
-    &.please {
-      font-size: 20px;
-      margin-top: 10px;
-      color: $gray-color;
-    }
+  } 
+}
+.thank_wrap{  
+  .thank {
+    & p {
+      @include extrabold-font;
+      line-height: 1.5;
+      &.please {
+        @include medium-font;
+        margin-top: 10px;
+        color: $gray-color;
+      }
+    }    
   }
 }
-
 /* footer */
 footer.index_footer {
   position: absolute;
@@ -191,15 +192,14 @@ footer.index_footer {
   display: flex;
   justify-content: space-between;
 }
-
 .contact {
   p {
-    font-size: 20px;
+    @include medium-font;
   }
   span {
     display: block;
     margin-top: 5px;
-    font-size: 24px;
+    @include extrabold-font;
     &::after {
       content: "";
       display: block;
@@ -209,7 +209,6 @@ footer.index_footer {
     }
   }
 }
-
 .link_box {
   & a {
     width: 40px;
@@ -226,85 +225,8 @@ footer.index_footer {
   }
 }
 
-.guide_modal.modal {
-  background-color: rgba(0, 0, 0, 0.8);
-  & .modal-dialog {
-    width: auto;
-  }
-}
-
-.guide_modal.modal .modal-content {
-  display: block;
-  & .text {
-    padding: 2vw;
-    h3 {
-      font-size: 2vw;
-      margin-bottom: 0.9vw;
-    }
-    p {
-      font-size: 1vw;
-      line-height: 1.5;
-    }
-    span {
-      display: block;
-      margin-top: 1vw;
-      color: $gray-color;
-    }
-  }
-}
-
 /************************ Media Query **/
-@media screen and (max-width: 1465px) {
-  .section01 .title {
-    font-size: 108px;
-  }
-  .introduce_img img {
-    width: 348px;
-  }
-  .work_wrap .work {
-    width: 500px;
-    height: 400px;
-    margin: 39px;
-    & img {
-      width: 30vw;
-    }
-  }
-  .section04 {
-    & h1 {
-      font-size: 118px;
-    }
-    & p {
-      &.please {
-        font-size: 18px;
-      }
-    }
-  }
-  .contact p {
-    & p {
-      font-size: 18px;
-    }
-    & span {
-      font-size: 22px;
-    }
-  }
-}
-@media screen and (max-width: 1350px) {
-  .section01 .title {
-    font-size: 98px;
-  }
-  .work_wrap .work img {
-    width: 38vw;
-  }
-}
-@media screen and (max-width: 1280px) {
-  .section01 .title {
-    font-size: 82px;
-  }
-  .section04 h1 {
-    font-size: 108px;
-  }
-}
-@media screen and (max-width: 1028px) {
+@media screen and (max-width: 1260px) {
   .section02 .text h1 {
     font-size: 64px;
     &:last-child {
@@ -314,9 +236,6 @@ footer.index_footer {
   .introduce_text {
     & h2 {
       font-size: 34px;
-    }
-    & h3 {
-      font-size: 22px;
     }
   }
   .introduce {
@@ -329,13 +248,17 @@ footer.index_footer {
       width: 300px;
     }
   }
+  .work_wrap {
+    & .work {
+      width: 500px;
+      height: 500px;
+      & img {
+        width: 450px;
+      }
+    }
+  }
 }
 @media screen and (max-width: 924px) {
-  #header .header_wrap,
-  .section01,
-  .section04 {
-    padding: 44px;
-  }
   .section02 .text {
     padding: 180px 0;
   }
@@ -346,13 +269,6 @@ footer.index_footer {
     }
   }
   .work_wrap {
-    & .work {
-      width: 500px;
-      height: 500px;
-      & img {
-        width: 450px;
-      }
-    }
     & .work1,
     & .work2,
     & .work3,
@@ -367,26 +283,11 @@ footer.index_footer {
     top: inherit;
   }
 }
-@media screen and (max-width: 712px) {
-  .section04 p {
-    font-size: 24px;
-  }
-  .contact {
-    & p {
-      font-size: 18px !important;
-    }
-    & span {
-      font-size: 22px;
-    }
-  }
-}
 @media screen and (max-width: 640px) {
-  #header .header_wrap,
-  section {
-    padding: 28px !important;
-    box-sizing: border-box;
+  #scroll_down {
+    left: 60px;
   }
-  .section01 .title, .section03 .title, .section04 h1 {
+  .section03 .title{
     font-size: 68px;
   }
   .introduce_icons {
@@ -399,23 +300,15 @@ footer.index_footer {
       display: flex;
     }
   }
-  .section04 p {
-    font-size: 20px;
-  }
   .contact_wrap {
     display: block;
   }
   .contact span {
     display: inline-block;
     margin-bottom: 28px;
-    font-size: 20px;
   }
 }
 @media screen and (max-width: 467px) {
-  .section01 .title {
-    font-size: 50px;
-    padding: 0;
-  }
   .section02 .text {
     padding: 90px 0;
   }

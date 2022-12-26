@@ -1,163 +1,4 @@
-@charset "UTF-8";
-/* variable setting */
-html {
-  overflow-x: hidden;
-}
-
-body {
-  overflow-x: hidden;
-  cursor: url(../images/cursor.png), auto;
-}
-body::-webkit-scrollbar {
-  width: 10px;
-}
-body::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-}
-body::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-a:hover,
-button:hover {
-  cursor: url(../images/cursor.png), auto;
-}
-
-/* modal */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  outline: 0;
-  background: rgba(0, 0, 0, 0.65);
-}
-
-.madal-bg {
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-}
-
-.modal .modal-dialog {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 85%;
-  max-width: 900px;
-  padding: 58px;
-  box-sizing: border-box;
-  background: #fff;
-}
-
-.modal .modal-content {
-  position: relative;
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-}
-.modal .modal-content .modal-close {
-  position: absolute;
-  right: -18px;
-  top: -18px;
-}
-.modal .modal-content .modal-close .close {
-  display: inline-block;
-  display: inline-block;
-  background: transparent;
-  border: none;
-}
-.modal .modal-content .modal-close .close:after {
-  content: "×";
-  font-size: 44px;
-  display: block;
-}
-
-.modal .modal-content .modal-images {
-  width: 337px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-.modal .modal-content .modal-images img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.modal .modal-content .modal-desc {
-  margin-left: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: calc(100% - 337px);
-}
-.modal .modal-content .modal-desc h3 {
-  font-size: 26px;
-  margin-bottom: 5px;
-}
-
-.modal .modal-content .modal-desc .project-detail .detail {
-  margin: 28px 0;
-}
-.modal .modal-content .modal-desc .project-detail .detail p {
-  display: flex;
-}
-.modal .modal-content .modal-desc .project-detail .detail span {
-  color: #888;
-  font-weight: 500;
-  width: 124px;
-  margin-bottom: 5px;
-}
-
-.modal .modal-content .modal-desc .project-view button,
-.view_button {
-  border: none;
-  text-align: center;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  font-weight: 500;
-  color: #121212;
-  background: #fff;
-  border: 1px solid #121212;
-  border-radius: 50px;
-}
-.modal .modal-content .modal-desc .project-view button:hover, .modal .modal-content .modal-desc .project-view button:hover,
-.view_button:hover,
-.view_button:hover {
-  background-color: #121212;
-  color: #fff;
-  border-color: #121212;
-}
-
-@media screen and (max-width: 1024px) {
-  .modal .modal-dialog {
-    padding: 28px;
-  }
-  .modal .modal-content .modal-desc {
-    display: block;
-    width: 100%;
-    margin: 0;
-  }
-  .modal .modal-content .modal-images {
-    display: none;
-  }
-  .modal .modal-content .modal-desc .project-detail .detail p {
-    display: block;
-    margin-bottom: 10px;
-  }
-  .modal .modal-content .modal-desc .project-detail .detail span {
-    display: block;
-    margin-bottom: 0;
-  }
-}
+/* utils setting */
 /* header */
 #header {
   position: fixed;
@@ -172,6 +13,16 @@ button:hover {
   justify-content: space-between;
   padding: 44px 88px;
   box-sizing: border-box;
+}
+@media screen and (max-width: 924px) {
+  #header .header_wrap {
+    padding: 44px;
+  }
+}
+@media screen and (max-width: 640px) {
+  #header .header_wrap {
+    padding: 28px;
+  }
 }
 #header .header_wrap .logo {
   font-size: 1.46vw;
@@ -194,10 +45,6 @@ button:hover {
 }
 #header .header_wrap ul li.home {
   display: none;
-}
-#header .header_wrap ul li a {
-  font-size: 1vw;
-  color: #fff;
 }
 
 /* menu */
@@ -256,8 +103,14 @@ button:hover {
 }
 #header .header_wrap ul.active li a {
   font-size: 92px;
+  color: #fff;
   position: relative;
   display: block;
+}
+@media screen and (max-width: 640px) {
+  #header .header_wrap ul.active li a {
+    font-size: 58px;
+  }
 }
 #header .header_wrap ul.active li a:after {
   content: "";
@@ -346,9 +199,6 @@ button:hover {
   }
 }
 @media screen and (max-width: 640px) {
-  #header .header_wrap {
-    padding: 28px;
-  }
   #header .header_wrap .menu_btn {
     width: 35px;
     height: 35px;
@@ -358,8 +208,5 @@ button:hover {
   }
   #header .header_wrap .menu_btn .line_2 {
     transform: rotate(0) translate(0%, 6px);
-  }
-  #header .header_wrap ul.active li a {
-    font-size: 50px;
   }
 }/*# sourceMappingURL=include.css.map */

@@ -1,4 +1,4 @@
-@import "../css/common.scss";
+@import "../css/utils.scss";
 
 /* header */
 #header {
@@ -32,10 +32,6 @@
   }
   & li.home {
     display: none;
-  }
-  & li a {
-    font-size: 1vw;
-    color: $white-color;
   }
 }
 
@@ -92,7 +88,8 @@
   display: flex;
   margin: 24px 0;
   & a {
-    font-size: 92px;
+    @include black-font;
+    color: $white-color;
     position: relative;
     display: block;
     &:after {
@@ -351,9 +348,6 @@
 
 
 @media screen and (max-width: 640px) {
-  #header .header_wrap{
-    padding: 28px;
-  }
   #header .header_wrap .menu_btn{
     width: 35px;
     height: 35px;
@@ -363,8 +357,5 @@
     & .line_2 {
       transform: rotate(0) translate(0%, 6px);
     }
-  }
-  #header .header_wrap ul.active li a{
-    font-size: 50px;
   }
 }

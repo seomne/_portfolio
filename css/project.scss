@@ -1,9 +1,9 @@
-@import "../css/common.scss";
+@import "../css/utils.scss";
 
 /* main */
 main {
   h1 {
-    font-size: 96px;
+    @include black-font;
     line-height: 1;
     span {
       display: block;
@@ -55,11 +55,10 @@ h1 {
   text-align: center;
 
   li {
-    border: 1px solid $white-color;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    display: inline-block;
-    border-radius: 50px;
+    @include more-btn;
+    @include medium-font;
+    border: 1px solid $white-color;    
+    display: inline-block;    
     &:nth-child(2) {
       margin: 0 10px;
     }
@@ -98,13 +97,13 @@ h1 {
   margin: 3vw 3vw;
 
   &-title {
-    font-size: 22px;
+    @include bold-font;
     font-weight: bold;
     margin-bottom: 4px;
   }
 
   &-thumb {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -131,7 +130,7 @@ h1 {
     }
   }
   &-txt {
-    font-size: 16px;
+    @include light-font;
   }
 }
 
@@ -144,21 +143,19 @@ footer.project_footer {
     opacity: 0.5;
   }
 }
-
 .contact_wrap {
   margin: 4vw 0;
   display: flex;
   justify-content: space-between;
 }
-
 .contact {
   p {
-    font-size: 20px;
+    @include medium-font;
   }
   span {
     display: block;
     margin-top: 5px;
-    font-size: 24px;
+    @include extrabold-font;
     &::after {
       content: "";
       display: block;
@@ -168,11 +165,9 @@ footer.project_footer {
     }
   }
 }
-
 .project_footer a::after {
   background-color: $white-color;
 }
-
 .link_box {
   & a {
     width: 40px;

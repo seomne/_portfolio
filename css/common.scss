@@ -1,15 +1,4 @@
-/* variable setting */
-$white-color: #fff;
-$black-color: #121212;
-$gray-color: #888;
-
-@mixin wrap-padding{
-  padding: 44px 88px;
-  box-sizing: border-box;
-}
-
-
-html{
+html {
   overflow-x: hidden;
 }
 body {
@@ -100,7 +89,7 @@ button:hover {
   justify-content: space-between;
   width: calc(100% - 337px);
   & h3 {
-    font-size: 26px;
+    @include extrabold-font;
     margin-bottom: 5px;
   }
 }
@@ -135,6 +124,7 @@ button:hover {
   }
 }
 
+/************************ Media Query **/
 @media screen and (max-width: 1024px) {
   .modal .modal-dialog {
     padding: 28px;

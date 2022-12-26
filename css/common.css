@@ -100,8 +100,18 @@ button:hover {
   width: calc(100% - 337px);
 }
 .modal .modal-content .modal-desc h3 {
-  font-size: 26px;
+  font-size: 28px;
   margin-bottom: 5px;
+}
+@media screen and (max-width: 712px) {
+  .modal .modal-content .modal-desc h3 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .modal .modal-content .modal-desc h3 {
+    font-size: 20px;
+  }
 }
 
 .modal .modal-content .modal-desc .project-detail .detail {
@@ -137,6 +147,7 @@ button:hover {
   border-color: #121212;
 }
 
+/************************ Media Query **/
 @media screen and (max-width: 1024px) {
   .modal .modal-dialog {
     padding: 28px;
