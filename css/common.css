@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* variable setting */
 html {
   overflow-x: hidden;
 }
@@ -122,19 +123,18 @@ button:hover {
   text-align: center;
   padding: 10px 20px;
   box-sizing: border-box;
-  font-size: var(--font-small);
   font-weight: 500;
-  color: #000;
+  color: #121212;
   background: #fff;
-  border: 1px solid #000;
+  border: 1px solid #121212;
   border-radius: 50px;
 }
 .modal .modal-content .modal-desc .project-view button:hover, .modal .modal-content .modal-desc .project-view button:hover,
 .view_button:hover,
 .view_button:hover {
-  background-color: #000;
+  background-color: #121212;
   color: #fff;
-  border-color: #000;
+  border-color: #121212;
 }
 
 @media screen and (max-width: 1024px) {

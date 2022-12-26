@@ -1,3 +1,5 @@
+@import "../css/common.scss";
+
 /* main */
 main {
   h1 {
@@ -12,8 +14,8 @@ main {
 }
 
 .project_title {
-  background-color: #000;
-  color: #fff;
+  background-color: $black-color;
+  color: $white-color;
   padding: 8vw 0 4vw;
 }
 
@@ -53,7 +55,7 @@ h1 {
   text-align: center;
 
   li {
-    border: 1px solid #fff;
+    border: 1px solid $white-color;
     padding: 10px 20px;
     box-sizing: border-box;
     display: inline-block;
@@ -62,9 +64,9 @@ h1 {
       margin: 0 10px;
     }
     &.active {
-      background: #fff;
-      color: #000;
-      border: 1px solid #000;
+      background: $white-color;
+      color: $black-color;
+      border: 1px solid $black-color;
     }
   }
 }
@@ -72,7 +74,7 @@ h1 {
   display: none;
   position: fixed;
   width: 100%;
-  background: #000;
+  background: $black-color;
   right: 0;
   bottom: 0;
   padding: 25px;
@@ -88,8 +90,7 @@ h1 {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 44px 88px;
-  box-sizing: border-box;
+  @include wrap-padding;
 }
 
 .post {
@@ -136,10 +137,9 @@ h1 {
 
 /* footer */
 footer.project_footer {
-  padding: 44px 88px;
-  box-sizing: border-box;
-  background-color: #000;
-  color: #fff;
+  @include wrap-padding;
+  background-color: $black-color;
+  color: $white-color;
   address {
     opacity: 0.5;
   }
@@ -164,13 +164,13 @@ footer.project_footer {
       display: block;
       width: 100%;
       height: 1px;
-      background-color: #fff;
+      background-color: $white-color;
     }
   }
 }
 
 .project_footer a::after {
-  background-color: #fff;
+  background-color: $white-color;
 }
 
 .link_box {
@@ -209,20 +209,7 @@ footer.project_footer {
   }
   main h1 {
     font-size: 76px;
-  }
-  .header_project .header_wrap ul.active li a {
-    font-size: 52px;
-  }
-  .header_project .header_wrap .menu_btn {
-    width: 40px;
-    height: 40px;
-  }
-  .header_project .header_wrap .menu_btn .line_1 {
-    transform: rotate(0) translate(0%, -6px);
-  }
-  .header_project .header_wrap .menu_btn .line_2 {
-    transform: rotate(0) translate(0%, 6px);
-  }
+  }  
   .post {
     width: 100%;
     margin: 34px 0;

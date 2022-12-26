@@ -1,3 +1,5 @@
+@import "../css/common.scss";
+
 /* header */
 #header {
   position: fixed;
@@ -9,8 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 44px 88px;
-  box-sizing: border-box;
+  @include wrap-padding;
   & .logo {
     font-size: 1.46vw;
     color: transparent;
@@ -34,7 +35,7 @@
   }
   & li a {
     font-size: 1vw;
-    color: #fff;
+    color: $white-color;
   }
 }
 
@@ -49,7 +50,7 @@
     top: 50%;
     width: 100%;
     height: 3px;
-    background-color: #fff;
+    background-color: $white-color;
     transition: all 0.3s;
   }
   & .line_1 {
@@ -61,7 +62,7 @@
 }
 #header .header_wrap .menu_btn.active {
   & span{
-    background-color: #fff !important;
+    background-color: $white-color !important;
     transition: all 0.3s;
   }
   & .line_1 {
@@ -81,7 +82,7 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: #000000;
+  background-color: $black-color;
   z-index: 5;
   opacity: 1;
   transition: all 0.5s;
@@ -98,7 +99,7 @@
       content: "";
       width: 0;
       height: 5px;
-      background-color: #fff;
+      background-color: $white-color;
       position: absolute;
       left: 0;
       bottom: -5px;
@@ -130,14 +131,14 @@
     margin-left: -1px;
     width: 2px;
     height: 120px;
-    background: #fff;
+    background: $white-color;
     content: " ";
   }
 }
 #scroll_title {
   display: block;
   text-transform: uppercase;
-  color: #fff;
+  color: $white-color;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.1em;

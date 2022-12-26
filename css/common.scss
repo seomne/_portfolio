@@ -1,3 +1,14 @@
+/* variable setting */
+$white-color: #fff;
+$black-color: #121212;
+$gray-color: #888;
+
+@mixin wrap-padding{
+  padding: 44px 88px;
+  box-sizing: border-box;
+}
+
+
 html{
   overflow-x: hidden;
 }
@@ -7,7 +18,7 @@ body {
     width: 10px;
   }
   &::-webkit-scrollbar-thumb {
-    background: #888;
+    background: $gray-color;
     border-radius: 10px;
   }
   &::-webkit-scrollbar-track {
@@ -48,7 +59,7 @@ button:hover {
   max-width: 900px;
   padding: 58px;
   box-sizing: border-box;
-  background: #fff;
+  background: $white-color;
 }
 .modal .modal-content {
   position: relative;
@@ -99,7 +110,7 @@ button:hover {
     display: flex;
   }
   & span {
-    color: #888;
+    color: $gray-color;
     font-weight: 500;
     width: 124px;
     margin-bottom: 5px;
@@ -111,17 +122,16 @@ button:hover {
   text-align: center;
   padding: 10px 20px;
   box-sizing: border-box;
-  font-size: var(--font-small);
   font-weight: 500;
-  color: #000;
-  background: #fff;
-  border: 1px solid #000;
+  color: $black-color;
+  background: $white-color;
+  border: 1px solid $black-color;
   border-radius: 50px;
   &:hover,
   &:hover {
-    background-color: #000;
-    color: #fff;
-    border-color: #000;
+    background-color: $black-color;
+    color: $white-color;
+    border-color: $black-color;
   }
 }
 
