@@ -1,3 +1,4 @@
+//scrolled menu color change
 function scroll_style() {
   var window_top = $(window).scrollTop();
   var div_top = $(".project_title").offset().top;

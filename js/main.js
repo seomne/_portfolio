@@ -1,5 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
+//section01 scrollTrigger
 gsap
   .timeline({
     scrollTrigger: {
@@ -28,6 +29,7 @@ gsap
     0
   );
 
+//section02 scrollTrigger
 gsap
   .timeline({
     scrollTrigger: {
@@ -66,6 +68,7 @@ gsap
     0
   );
 
+//section03 scrollTrigger
 gsap
   .timeline({
     scrollTrigger: {
@@ -113,6 +116,8 @@ gsap
     8
   );
 
+
+//section04 scrollTrigger 
 gsap
   .timeline({
     scrollTrigger: {
