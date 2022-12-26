@@ -1,6 +1,11 @@
 @charset "UTF-8";
+html {
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
+  cursor: url(../images/cursor.png), auto;
 }
 body::-webkit-scrollbar {
   width: 10px;
@@ -13,13 +18,9 @@ body::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.7);
 }
 
-body {
-  cursor: url(../images/cursor\(2\).png), auto;
-}
-
 a:hover,
 button:hover {
-  cursor: url(../images/cursor\(2\).png), auto;
+  cursor: url(../images/cursor.png), auto;
 }
 
 /* modal */
@@ -98,7 +99,7 @@ button:hover {
   width: calc(100% - 337px);
 }
 .modal .modal-content .modal-desc h3 {
-  font-size: 28px;
+  font-size: 26px;
   margin-bottom: 5px;
 }
 

@@ -15,11 +15,6 @@ gsap
     { y: "90vh", ease: "none", duration: 10 },
     0
   )
-  .to(
-    "#header .header_wrap .logo",
-    { visibility: "hidden", ease: "none", duration: 0 },
-    0
-  )
   .fromTo(
     "#header .header_wrap .menu_btn span",
     { backgroundColor: "#fff" },
@@ -43,18 +38,13 @@ gsap
     },
   })
   .to(
-    "#header .header_wrap .menu_btn",
-    { display: "block", ease: "none", duration: 0 },
-    0
-  )
-  .to(
     "#header .header_wrap .logo",
     { color: "#000", ease: "none", duration: 0 },
     0
   )
   .to(
     "#header .header_wrap .menu_btn span",
-    { backgroundColor: "#000000", ease: "none", duration: 0 },
+    { backgroundColor: "#000", ease: "none", duration: 0 },
     0
   )
   .fromTo(
@@ -89,7 +79,7 @@ gsap
   .fromTo(
     "#main .section03",
     { backgroundColor: "#fff" },
-    { backgroundColor: "#000000", ease: "none", duration: 1 },
+    { backgroundColor: "#000", ease: "none", duration: 1 },
     0
   )
   .fromTo(
@@ -100,13 +90,13 @@ gsap
   )
   .fromTo(
     "#header .header_wrap .logo",
-    { color: "#000000" },
+    { color: "#000" },
     { color: "#fff", ease: "none", duration: 1 },
     0
   )
   .fromTo(
     "#header .header_wrap .menu_btn span",
-    { backgroundColor: "#000000" },
+    { backgroundColor: "#000" },
     { backgroundColor: "#fff", ease: "none", duration: 1 },
     0
   )
@@ -135,12 +125,12 @@ gsap
   .fromTo(
     "#header .header_wrap .logo",
     { color: "#fff" },
-    { color: "#000000", ease: "none", duration: 1 },
+    { color: "#000", ease: "none", duration: 1 },
     0
   )
   .fromTo(
     "#header .header_wrap .menu_btn span",
     { backgroundColor: "#fff" },
-    { backgroundColor: "#000000", ease: "none", duration: 1 },
+    { backgroundColor: "#000", ease: "none", duration: 1 },
     0
   );

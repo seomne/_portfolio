@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3vw 6vw;
+  padding: 44px 88px;
   & .logo {
     font-size: 1.46vw;
     color: transparent;
@@ -58,8 +58,8 @@
   }
 }
 
-.header_project .header_wrap .menu_btn.active {  
-  & span{
+.header_project .header_wrap .menu_btn.active {
+  & span {
     background-color: #fff !important;
     transition: all 0.3s;
   }
@@ -199,7 +199,7 @@ h1 {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 3vw 9vw;
+  padding: 44px 88px;
   box-sizing: border-box;
 }
 
@@ -247,10 +247,13 @@ h1 {
 
 /* footer */
 footer.project_footer {
-  padding: 3vw 6vw;
+  padding: 44px 88px;
   box-sizing: border-box;
   background-color: #000;
-  color: #fff;
+  color: #fff;  
+  address {
+    opacity: 0.5;
+  }
 }
 
 .contact_wrap {
@@ -283,10 +286,10 @@ footer.project_footer {
 
 .link_box {
   & a {
-    width: 2vw;
-    height: 2vw;
+    width: 40px;
+    height: 40px;
     display: inline-block;
-    margin-right: 0.5vw;
+    margin-right: 10px;
     &:last-child {
       margin-right: 0;
     }
@@ -308,33 +311,50 @@ footer.project_footer {
   .filtermenu.media {
     display: block;
   }
-  .header_project .header_wrap ul{
+  .header_project .header_wrap ul {
     display: none;
   }
-  .header_project.media .header_wrap .menu_btn{
+  .header_project.media .header_wrap .menu_btn {
     display: block;
     opacity: 1;
   }
 }
 @media screen and (max-width: 768px) {
-  .header_project .header_wrap ul.active li a{
+  #header .header_wrap,
+  .container,
+  .filtermenu.media,
+  footer.project_footer {
+    padding: 28px;
+  }
+  main h1 {
+    font-size: 76px;
+  }
+  .header_project .header_wrap ul.active li a {
     font-size: 52px;
   }
-  .header_project .header_wrap .menu_btn{
+  .header_project .header_wrap .menu_btn {
     width: 40px;
     height: 40px;
   }
-  .header_project .header_wrap .menu_btn .line_1{
+  .header_project .header_wrap .menu_btn .line_1 {
     transform: rotate(0) translate(0%, -6px);
   }
-  .header_project .header_wrap .menu_btn .line_2{
+  .header_project .header_wrap .menu_btn .line_2 {
     transform: rotate(0) translate(0%, 6px);
   }
   .post {
     width: 100%;
     margin: 34px 0;
   }
-  main h1{
-    font-size: 80px;
+  footer.project_footer{
+    padding-bottom: 128px;
+  }
+  .contact_wrap {
+    display: block;
+  }
+  .contact span {
+    display: inline-block;
+    margin-bottom: 28px;
+    font-size: 20px;
   }
 }
