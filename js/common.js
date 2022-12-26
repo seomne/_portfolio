@@ -35,11 +35,6 @@ $(document).on("click", ".menu_btn", function (e) {
   }
 });
 
-//menu close
-$(document).on("click", "#header .header_wrap ul.active li a", function () {
-  $("#header .header_wrap ul.active").fadeOut();
-});
-
 //Modal open
 $(".open-modal").on("click", function () {
   var state = $(this).data("state");
