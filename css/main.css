@@ -133,12 +133,21 @@ section {
     font-size: 18px;
   }
 }
+.introduce_tag {
+  margin-bottom: 38px;
+}
+.introduce_tag span {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 18px;
+  color: #888;
+}
 .introduce_icons {
   display: flex;
   margin: 12px 0 24px;
 }
 .introduce_icons p {
-  background-color: #f5f5f5;
+  background-color: #fafafa;
   margin-right: 10px;
   padding: 10px;
   border-radius: 5px;
