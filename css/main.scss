@@ -205,7 +205,7 @@ footer.index_footer {
   p {
     @include medium-font;
   }
-  span {
+  a {
     display: block;
     margin-top: 5px;
     @include extrabold-font;

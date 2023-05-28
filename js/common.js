@@ -1,5 +1,3 @@
-AOS.init();
-
 //project_dt.html include
 window.addEventListener("load", function () {
   var allElements = document.getElementsByTagName("*");
@@ -19,20 +17,22 @@ window.addEventListener("load", function () {
 });
 
 //menu open
-$(document).on("click", ".menu_btn", function (e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
+  var menuBtn = document.querySelector(".menu_btn");
+  var menuList = document.querySelector("ul");
 
-  if ($(this).is(".active")) {
-    $(this).removeClass("active");
-    $("#header .header_wrap .logo, #header .header_wrap ul").removeClass(
-      "active"
-    );
-  } else {
-    $(this).addClass("active");
-    $("#header .header_wrap .logo, #header .header_wrap ul").addClass(
-      "active"
-    );
-  }
+  menuBtn.addEventListener("click", function() {
+    menuList.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+  });
+
+  var menuItems = menuList.querySelectorAll("li");
+
+  menuItems.forEach(function(menuItem) {
+    menuItem.addEventListener("click", function() {
+      menuList.classList.remove("active");
+    });
+  });
 });
 
 //Modal open

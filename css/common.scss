@@ -1,3 +1,5 @@
+@import "../css/utils.scss";
+
 html {
   overflow-x: hidden;
 }
@@ -74,12 +76,11 @@ button:hover {
 }
 .modal .modal-content .modal-images {
   width: 337px;
+  max-height: 430px;
   box-sizing: border-box;
   overflow: hidden;
   & img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 }
 .modal .modal-content .modal-desc {
@@ -96,7 +97,8 @@ button:hover {
 .modal .modal-content .modal-desc .project-detail .detail {
   margin: 28px 0;
   & p {
-    display: flex;
+    display: grid;
+    grid-template-columns: 130px 1fr;
   }
   & span {
     color: $gray-color;

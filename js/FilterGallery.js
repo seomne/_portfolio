@@ -1,7 +1,7 @@
 class FilterGallery {
   constructor() {
     this.$filtermenuList = $(".filtermenu li");
-    this.$container = $(".container");
+    this.$container = $(".project");
 
     this.updateMenu("all");
     this.$filtermenuList.on("click", $.proxy(this.onClickFilterMenu, this));
@@ -29,11 +29,11 @@ class FilterGallery {
   updateGallery(targetFilter) {
     if (targetFilter === "all") {
       this.$container.fadeOut(300, () => {
-        $(".post").show();
+        $(".grid-item").show();
         this.$container.fadeIn();
       });
     } else {
-      this.$container.find(".post").each((index, element) => {
+      this.$container.find(".grid-item").each((index, element) => {
         this.$container.fadeOut(300, () => {
           if ($(element).hasClass(targetFilter)) {
             $(element).show();

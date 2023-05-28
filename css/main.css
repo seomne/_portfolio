@@ -330,22 +330,22 @@ footer.index_footer {
     font-size: 18px;
   }
 }
-.contact span {
+.contact a {
   display: block;
   margin-top: 5px;
   font-size: 28px;
 }
 @media screen and (max-width: 712px) {
-  .contact span {
+  .contact a {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 640px) {
-  .contact span {
+  .contact a {
     font-size: 20px;
   }
 }
-.contact span::after {
+.contact a::after {
   content: "";
   display: block;
   width: 100%;

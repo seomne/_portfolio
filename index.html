@@ -73,23 +73,15 @@
       <!-- section02 -->
       <section class="section02" id="2">
         <div class="text">
-          <h1 class="text_1">Time is the most valualbe thing</h1>
-          <h1 class="text_2">a man can spend</h1>
-          <h1 class="text_3">by Theophrastus</h1>
+          <h1 class="text_1">미래는 현재 우리가 무엇을</h1>
+          <h1 class="text_2">하는가에 달려 있다.</h1>
+          <h1 class="text_3">by 마하트마 간디</h1>
         </div>
         <div class="introduce">
-          <div
-            class="introduce_img"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
+          <div class="introduce_img" data-aos="fade-up" data-aos-delay="300">
             <img src="images/my_emoji.png" alt="" />
           </div>
-          <div
-            class="introduce_text"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
+          <div class="introduce_text" data-aos="fade-up" data-aos-delay="600">
             <h2>서은혜 (Seo Eun-hye)</h2>
             <h3>
               사람들과 끊임없이 커뮤니케이션하고,<br />서로에게 배우고 공유하며
@@ -97,8 +89,9 @@
               생각합니다.
             </h3>
             <div class="introduce_tag">
-              <span>#학습선호</span>
+              <span>#ESFP</span>
               <span>#활동적</span>
+              <span>#학습선호</span>
               <span>#프로젝트관리능력</span>
               <span>#자기개발능력</span>
             </div>
@@ -160,14 +153,26 @@
             <div class="work work1 open-modal" id="open-modal1" data-state="1">
               <img src="images/cafein.png" alt="cafein" />
             </div>
-            <div class="work work2 open-modal" id="open-modal6" data-state="6">
-              <img src="images/somemarry.png" alt="somemarry" />
+            <div
+              class="work work2 open-modal"
+              id="open-modal26"
+              data-state="26"
+            >
+              <img src="images/gotcha.png" alt="gotcha" />
             </div>
-            <div class="work work3 open-modal" id="open-modal7" data-state="7">
-              <img src="images/buva.png" alt="uspiece_dt01" />
+            <div
+              class="work work3 open-modal"
+              id="open-modal46"
+              data-state="46"
+            >
+              <img src="images/gotchawashmall.png" alt="gotchawashmall" />
             </div>
-            <div class="work work4 open-modal" id="open-modal2" data-state="2">
-              <img src="images/welog.png" alt="welog" />
+            <div
+              class="work work4 open-modal"
+              id="open-modal33"
+              data-state="33"
+            >
+              <img src="/images/xbanner.png" alt="poster" />
             </div>
           </div>
         </div>
@@ -177,7 +182,7 @@
         <h1 data-aos="fade-up">Growing together<br />with me?</h1>
         <div class="thank_wrap">
           <div class="thank" data-aos="fade-up">
-            <p>귀중한 시간 내어 포트폴리오를 정독해주셔서 감사합니다.</p>
+            <p>귀중한 시간 내어 포트폴리오를 감상해주셔서 감사합니다.</p>
             <p>많은 관심과 피드백은 언제나 환영합니다!</p>
             <p>함께 상생하며 성장할 동료를 찾으신다면 연락해주세요😊</p>
             <p class="please">
@@ -188,11 +193,11 @@
         <div class="contact_wrap">
           <div class="contact">
             <p>Quick inquiry</p>
-            <span>+82-10-5778-0702</span>
+            <a href="tel:01057780702">+82-10-5778-0702</a>
           </div>
           <div class="contact">
             <p>E-mail inquiry</p>
-            <span>eunhye_032@kakao.com</span>
+            <a href="mailto:eunhye_032@kakao.com">eunhye_032@kakao.com</a>
           </div>
           <div class="link_box">
             <a href="https://github.com/seomne/_portfolio" target="_blank"
@@ -210,6 +215,19 @@
       </section>
     </main>
 
+    <!-- notice modal -->
+    <div class="modal" id="modal0" style="display: block">
+      <div class="modal-dialog">
+        <p>안녕하세요👋</p>
+        <p>
+          저의 포트폴리오는 반응형으로 제작되었지만 PC 웹 환경에서 감상하시면<br />
+          조금 더 인터렉티브한 화면을 경험하실 수 있어요👀
+        </p>
+        <p>감상해주셔서 감사드리며 기분 좋은 하루 보내시길 바랍니다😊</p>
+      </div>
+      <div class="madal-bg"></div>
+    </div>
+
     <!-- html include -->
     <div data-include-path="project_dt.html"></div>
 
@@ -221,5 +239,9 @@
 
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
