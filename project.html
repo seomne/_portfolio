@@ -57,7 +57,7 @@
       <section>
         <div class="project_title">
           <h1>My<span>Project</span></h1>
-          <ul class="filtermenu">
+          <!-- <ul class="filtermenu">
             <li data-filter="all">All</li>
             <li data-filter="publishing">Publishing</li>
             <li data-filter="design">Design</li>
@@ -66,7 +66,7 @@
             <li data-filter="all">All</li>
             <li data-filter="publishing">Publishing</li>
             <li data-filter="design">Design</li>
-          </ul>
+          </ul> -->
         </div>
         <div class="project">
           <div class="grid infinite-scroll">
@@ -75,7 +75,63 @@
               id="open-modal1"
               data-state="1"
             >
-              <img src="images/cafein.png" alt="" />
+              <img src="images/cafein.png" alt="cafein" />
+            </div>
+            <div
+              class="grid-item publishing open-modal"
+              id="open-modal2"
+              data-state="2"
+            >
+              <img src="images/welog.png" alt="welog" />
+            </div>
+            <div
+              class="grid-item publishing open-modal"
+              id="open-modal3"
+              data-state="3"
+            >
+              <img src="images/iseul.png" alt="iseul" />
+            </div>
+            <div
+              class="grid-item publishing open-modal"
+              id="open-modal4"
+              data-state="4"
+            >
+              <img src="images/latebye.png" alt="늦은배웅" />
+            </div>
+            <div
+              class="grid-item publishing open-modal"
+              id="open-modal7"
+              data-state="7"
+            >
+              <img src="images/buva.png" alt="부산벤처기업협회" />
+            </div>
+            <div
+              class="grid-item publishing open-modal"
+              id="open-modal8"
+              data-state="8"
+            >
+              <img src="images/nacl.png" alt="네클" />
+            </div>
+            <div
+              class="grid-item publishing open-modal"
+              id="open-modal12"
+              data-state="12"
+            >
+              <img src="images/wordrelay.png" alt="끝말잇기 게임" />
+            </div>
+            <div
+              class="grid-item publishing open-modal"
+              id="open-modal13"
+              data-state="13"
+            >
+              <img src="images/calculator.png" alt="계산기" />
+            </div>
+            <div
+              class="grid-item publishing open-modal"
+              id="open-modal14"
+              data-state="14"
+            >
+              <img src="images/tetris.png" alt="테트리스 게임" />
             </div>
             <div
               class="grid-item publishing open-modal"
@@ -177,8 +233,8 @@
             </div>
             <div
               class="grid-item design open-modal"
-              id="open-modal39"
-              data-state="39"
+              id="open-modal11"
+              data-state="11"
             >
               <img src="images/xbanner03.jpg" alt="" />
             </div>
@@ -231,6 +287,20 @@
             >
               <img src="images/gotchawashmall.png" alt="" />
             </div>
+            <div
+              class="grid-item design open-modal"
+              id="open-modal19"
+              data-state="19"
+            >
+              <img src="images/sns/leaflet01.png" alt="" />
+            </div>
+            <div
+              class="grid-item design open-modal"
+              id="open-modal9"
+              data-state="9"
+            >
+              <img src="images/hana.jpg" alt="" />
+            </div>
           </div>
         </div>
       </section>
@@ -268,16 +338,35 @@
     <script src="js/FilterGallery.js"></script>
 
     <script>
-      $(function () {
+      // 이미지 로딩 완료 후 Masonry 초기화
+      window.addEventListener("load", function () {
         var masonryGrid = $(".grid").masonry({
           // Masonry 옵션 설정
           itemSelector: ".grid-item",
           // Infinite Scroll 옵션 설정
           infiniteScroll: true,
           append: ".grid-item",
-          // 추가적인 Infinite Scroll 옵션 설정
         });
       });
+
+      const gridItems = document.querySelectorAll(".grid-item");
+      const gridItemsArray = Array.from(gridItems);
+      const shuffledGridItems = shuffleArray(gridItemsArray);
+
+      // 순서를 무작위로 섞은 요소들을 부모 요소에 추가
+      const gridContainer = document.querySelector(".grid");
+      shuffledGridItems.forEach((item) => {
+        gridContainer.appendChild(item);
+      });
+
+      // 배열을 무작위로 섞는 함수
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
     </script>
 
     <script src="js/common.js"></script>
