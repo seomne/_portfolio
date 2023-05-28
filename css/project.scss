@@ -190,7 +190,7 @@ footer.project_footer {
   p {
     @include medium-font;
   }
-  span {
+  a {
     display: block;
     margin-top: 5px;
     @include extrabold-font;
@@ -199,7 +199,7 @@ footer.project_footer {
       display: block;
       width: 100%;
       height: 1px;
-      background-color: $white-color;
+      background-color: $black-color;
     }
   }
 }
