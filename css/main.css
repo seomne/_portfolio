@@ -331,8 +331,9 @@ footer.index_footer {
   }
 }
 .contact a {
-  display: block;
+  display: inline-block;
   margin-top: 5px;
+  margin-bottom: 20px;
   font-size: 28px;
 }
 @media screen and (max-width: 712px) {
@@ -488,5 +489,8 @@ footer.index_footer {
   }
   .section04 p {
     font-size: 18px;
+  }
+  .section04 p.media {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

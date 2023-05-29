@@ -206,8 +206,9 @@ footer.index_footer {
     @include medium-font;
   }
   a {
-    display: block;
+    display: inline-block;
     margin-top: 5px;
+    margin-bottom: 20px;
     @include extrabold-font;
     &::after {
       content: "";
@@ -365,6 +366,9 @@ footer.index_footer {
     }
     & p {
       font-size: 18px;
+      &.media{
+        display: none;
+      }
     }
   }
 }
