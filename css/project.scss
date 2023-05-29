@@ -138,8 +138,9 @@ footer.project_footer {
     @include medium-font;
   }
   a {
-    display: block;
+    display: inline-block;
     margin-top: 5px;
+    margin-bottom: 24px;
     @include extrabold-font;
     &::after {
       content: "";
@@ -197,13 +198,10 @@ footer.project_footer {
   main h1 {
     font-size: 76px;
   }  
-  .grid-item{width: calc(50% - 64px);}
+  .grid-item{width: calc(50% - 44px); margin: 8px;}
   .post {
     width: 100%;
     margin: 34px 0;
-  }
-  footer.project_footer {
-    padding-bottom: 128px;
   }
   .contact_wrap {
     display: block;
